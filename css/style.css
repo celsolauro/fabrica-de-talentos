@@ -77,3 +77,8 @@ p.ph,b.ph{display:inline-block;width:auto}
 .prop{display:block;margin-top:.3em;font-size:.85em;font-style:italic;color:#e0a800}
 .badges .badge-hl{background:#e0a800;color:#111;font-weight:800}
 .card-hl{border:2px solid #e0a800}
+
+.arc{display:none}.hero-logo,.foot img,.brand img{mix-blend-mode:normal;filter:none}.brand,.top{background-color:#000}.logo-wrap{width:min(420px,80%);margin:0 auto;background:#000;box-shadow:0 0 50px 40px #000;border-radius:50px}.logo-wrap .hero-logo{width:100%}.foot{background-color:#000}
+.logo-wrap{box-shadow:0 0 80px 70px #000,0 0 180px 120px #000c;border-radius:120px}
+
+.top nav a.nav-quiz{display:inline;color:var(--gold2)}.quiz-cta{margin-top:1rem}.btn-ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold);box-shadow:none;padding:.8em 1.6em;font-size:.8rem}.btn-ghost:hover{background:rgba(217,169,59,.12)}

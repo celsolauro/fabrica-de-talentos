@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070605">
+  <title>Quiz do Teatro Musical — Fábrica de Talentos Jaguariúna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <script src="js/quiz.js" defer></script>
+</head>
+<body>
+  <div class="stage" aria-hidden="true">
+    <div class="stage-artist stage-left"></div><div class="stage-artist stage-right"></div>
+    <div class="beam beam-left"></div><div class="beam beam-right"></div>
+    <div class="smoke smoke-one"></div><div class="smoke smoke-two"></div>
+    <div class="stage-texture"></div>
+  </div>
+  <header class="top">
+  <a href="../" class="brand"><img src="../assets/logo-fundo-preto.png" alt="Fábrica de Talentos Jaguariúna" width="120" height="68"></a>
+  <nav><a href="../#sobre">Sobre</a><a href="../#quem">Quem pode</a><a href="../#cronograma">Cronograma</a><a href="../#faq">Dúvidas</a><a href="./" class="nav-quiz" aria-current="page">Quiz</a><a href="../#inscricao" class="btn btn-sm">Inscreva-se</a></nav>
+</header>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="shell">
+    
+    <main>
+      <section id="start" class="screen intro" aria-labelledby="start-title">
+        <div class="eyebrow">AS LUZES ACENDERAM. É A SUA VEZ.</div>
+        <div class="logo-wrap"><img class="hero-logo" src="../assets/logo-fundo-preto.png" alt="Fábrica de Talentos Jaguariúna" width="1672" height="941"></div>
+        <h1 id="start-title">Quiz do <span>Teatro Musical</span></h1>
+        <p class="lead">Dos bastidores aos grandes palcos: quanto você sabe sobre o universo dos musicais?</p>
+        <div class="details"><span>10 perguntas</span><i aria-hidden="true">✦</i><span>20s por pergunta</span></div>
+        <button class="button primary" id="start-btn" data-testid="start-btn">Que comece o espetáculo <span aria-hidden="true">→</span></button>
+        <p class="micro">Escolha uma resposta e descubra seu perfil artístico.</p>
+      </section>
+      <section id="quiz" class="screen" hidden aria-labelledby="question">
+        <div class="quiz-top"><span id="progress-label"></span><span id="score"></span></div>
+        <div class="progress-track"><div id="progress"></div></div>
+        <div class="status-row"><span id="streak">Sequência: 0</span><span id="timer-text" role="timer" aria-label="Tempo restante">20s</span></div>
+        <div class="timer-track" aria-hidden="true"><div id="timer-bar"></div></div>
+        <h2 id="question" tabindex="-1"></h2>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback" hidden aria-live="polite"><strong id="feedback-title"></strong><p id="explanation"></p></div>
+        <button class="button primary" id="next-btn" data-testid="next-btn" hidden>Próxima <span aria-hidden="true">→</span></button>
+      </section>
+      <section id="result" class="screen result" data-testid="result" hidden aria-labelledby="result-title">
+        <div class="eyebrow">APLAUSOS PARA VOCÊ</div>
+        <div class="result-symbol" aria-hidden="true">✦</div>
+        <p class="score-caption">Seu resultado</p><div id="final-score" class="final-score"></div>
+        <p class="profile-caption">SEU PERFIL ARTÍSTICO</p><h2 id="result-title" tabindex="-1"></h2><p id="profile-description" class="lead"></p>
+        <div class="course">Curso técnico em teatro com ênfase em musical, gratuito, em parceria com a Unifaj, dá direito ao DRT. 40 vagas. Inscrições online de 28/10 a 20/11/2026.</div>
+        <div class="result-actions"><a class="button primary" href="../#inscricao">Inscreva-se na Fábrica de Talentos <span aria-hidden="true">↗</span></a><button id="share-btn" class="button secondary">Compartilhar resultado</button><button id="restart-btn" class="button text-button">Jogar novamente <span aria-hidden="true">↻</span></button></div>
+      </section>
+    </main>
+  </div>
+<footer class="foot">
+  <img src="../assets/logo-fundo-preto.png" alt="Fábrica de Talentos Jaguariúna" width="180" height="101" loading="lazy">
+  <p class="org">Prefeitura de Jaguariúna · Secretaria Municipal de Cultura · Unifaj</p>
+  <p>Contato: <span class="ph">[A CONFIRMAR: e-mail / telefone / redes]</span></p>
+  <p><a href="#" class="ph">Aviso de privacidade (LGPD) [A CONFIRMAR LINK]</a></p>
+  <p class="small">© 2026 Fábrica de Talentos Jaguariúna</p>
+</footer>
+  <div id="toast" role="status" hidden>Link copiado!</div>
+</body>
+</html>
