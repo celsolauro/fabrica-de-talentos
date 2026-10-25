@@ -1,0 +1,79 @@
+:root{--bg:#070605;--bg2:#120e08;--gold:#d9a93b;--gold2:#f3cf6b;--tx:#f4efe6;--mut:#b8ad9a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.6 Montserrat,system-ui,sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold2)}
+h2{font-weight:800;font-size:clamp(1.6rem,5vw,2.4rem);letter-spacing:.02em;text-transform:uppercase;margin-bottom:1rem}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--gold);margin-top:.6rem;border-radius:2px}
+.ph{color:#ffcf5a;background:rgba(255,190,40,.12);border:1px dashed rgba(255,200,80,.6);border-radius:4px;padding:0 .35em;font-weight:600}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold) 60%,#a77a20);color:#140f06;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:.95em 2.2em;border-radius:999px;text-decoration:none;box-shadow:0 8px 30px rgba(217,169,59,.35);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-sm{padding:.5em 1.2em;font-size:.8rem}
+.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;background:rgba(7,6,5,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(217,169,59,.15)}
+.brand img{width:90px}
+.top nav{display:flex;gap:1.2rem;align-items:center}
+.top nav a:not(.btn){display:none;color:var(--tx);text-decoration:none;font-size:.85rem;font-weight:600}
+.hero{position:relative;overflow:hidden;text-align:center;padding:3rem 1.25rem 4rem;background:radial-gradient(ellipse at 50% 0%,rgba(243,207,107,.28),transparent 60%),radial-gradient(ellipse at 15% 100%,rgba(217,169,59,.15),transparent 50%),var(--bg)}
+.arc{position:absolute;inset:auto 0 0 0;width:100%;height:70%;opacity:.5;pointer-events:none}
+.hero>*{position:relative}
+.hero-logo{width:min(560px,100%);margin:0 auto}
+.slogan{font-size:clamp(1.1rem,4.5vw,1.7rem);letter-spacing:.12em;margin-top:.5rem}
+.slogan strong{color:var(--gold2);font-weight:800}
+.lead{color:var(--mut);margin:.4rem 0 1.4rem}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:1rem}
+.badges span{border:1px solid rgba(217,169,59,.5);border-radius:999px;padding:.25em .9em;font-size:.82rem;font-weight:600}
+.dates{margin-bottom:1.6rem}
+.sec{padding:4rem 1.25rem;max-width:1080px;margin:0 auto}
+.alt{max-width:none;background:linear-gradient(180deg,var(--bg2),var(--bg));border-top:1px solid rgba(217,169,59,.12);border-bottom:1px solid rgba(217,169,59,.12)}
+.alt>*{max-width:1040px;margin-left:auto;margin-right:auto}
+.big{font-size:clamp(1.2rem,4vw,1.6rem);font-weight:300;margin-bottom:.8rem}
+.big strong{color:var(--gold2);font-weight:800}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.6rem}
+.card{background:linear-gradient(160deg,#1a140b,#0d0a06);border:1px solid rgba(217,169,59,.25);border-radius:14px;padding:1.1rem}
+.card h3{color:var(--gold2);font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.card p{font-size:.9rem}
+.steps{padding-left:1.2rem;display:grid;gap:.6rem;margin-bottom:2rem}
+.steps li::marker{color:var(--gold);font-weight:800}
+.countdown{text-align:center;border:1px solid rgba(217,169,59,.3);border-radius:20px;padding:1.6rem 1rem;background:radial-gradient(ellipse at 50% 0,rgba(217,169,59,.18),transparent 70%)}
+.cd-label{text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:.85rem;color:var(--mut)}
+.cd{display:flex;justify-content:center;gap:.6rem;margin:1rem 0}
+.cd div{min-width:68px;padding:.6rem .4rem;border-radius:12px;background:#15100a;border:1px solid rgba(217,169,59,.35)}
+.cd b{display:block;font-size:clamp(1.6rem,7vw,2.6rem);font-weight:800;color:var(--gold2);line-height:1.1}
+.cd span{font-size:.72rem;text-transform:uppercase;color:var(--mut)}
+.small{font-size:.82rem;color:var(--mut)}
+.form-embed{margin:2rem 0 1.5rem;min-height:200px;border:2px dashed rgba(217,169,59,.4);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center;padding:1.5rem;background:#0e0b07}
+.form-embed iframe{width:100%;min-height:900px;border:0}
+.center{text-align:center;margin-top:.8rem}
+.timeline{list-style:none;padding:0;border-left:2px solid var(--gold);margin-left:.4rem}
+.timeline li{position:relative;padding:0 0 1.4rem 1.4rem;display:flex;flex-direction:column}
+.timeline li::before{content:"";position:absolute;left:-8px;top:.4em;width:14px;height:14px;border-radius:50%;background:var(--gold2);box-shadow:0 0 12px var(--gold)}
+.timeline b{color:var(--gold2);align-self:flex-start}
+details{border-bottom:1px solid rgba(217,169,59,.2);padding:1rem 0}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";color:var(--gold2);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:.6rem;color:var(--mut)}
+.sede{position:relative;min-height:420px;display:flex;align-items:flex-end;overflow:hidden}
+.sede img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sede::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 5%,rgba(7,6,5,.3) 70%)}
+.sede-txt{position:relative;z-index:1;padding:3rem 1.25rem;max-width:1080px;margin:0 auto;width:100%}
+.foot{text-align:center;padding:3rem 1.25rem;border-top:1px solid rgba(217,169,59,.2);display:grid;gap:.6rem;justify-items:center;font-size:.9rem}
+.foot img{width:160px}
+.org{font-weight:600;color:var(--gold2)}
+@media(min-width:800px){
+  .top{padding:.6rem 2rem}.top nav a:not(.btn){display:inline}
+  .hero{padding:4rem 2rem 6rem}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .timeline{border-left:0;border-top:2px solid var(--gold);display:grid;grid-template-columns:repeat(5,1fr);margin:2rem 0 0}
+  .timeline li{padding:1.4rem .6rem 0 0}.timeline li::before{left:0;top:-8px}
+  .sede{min-height:560px}
+}
+.hero-logo,.foot img,.brand img{mix-blend-mode:lighten}
+p.ph,b.ph{display:inline-block;width:auto}
+.hero{padding-top:2rem}
+.arc{height:55%}
+.hero-logo{width:min(420px,80%)}
+.prop{display:block;margin-top:.3em;font-size:.85em;font-style:italic;color:#e0a800}
+.badges .badge-hl{background:#e0a800;color:#111;font-weight:800}
+.card-hl{border:2px solid #e0a800}
